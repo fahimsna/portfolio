@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #020617;
+  color: #f8fafc;
+}
+
+::selection {
+  background: #38bdf8;
+  color: white;
+}
+
+section {
+  position: relative;
+}
