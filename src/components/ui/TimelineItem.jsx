@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 
-const TimelineItem = ({ role, company, duration, responsibilities }) => {
+const TimelineItem = ({
+  role,
+  company,
+  companyUrl,
+  duration,
+  responsibilities,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -40 }}
@@ -14,7 +20,18 @@ const TimelineItem = ({ role, company, duration, responsibilities }) => {
 
       <h3 className="text-2xl font-bold text-white">{role}</h3>
 
-      <p className="text-cyan-400 mt-1 font-medium">{company}</p>
+      {companyUrl ? (
+        <a
+          href={companyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-cyan-400 mt-1 font-medium hover:underline transition-colors inline-block"
+        >
+          {company}
+        </a>
+      ) : (
+        <p className="text-cyan-400 mt-1 font-medium">{company}</p>
+      )}
 
       <p className="text-slate-500 text-sm mt-1">{duration}</p>
 

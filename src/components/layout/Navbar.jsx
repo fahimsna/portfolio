@@ -108,7 +108,7 @@ const Navbar = () => {
           gap-8
           "
         >
-          {navLinks.map((link, index) => (
+          {navLinks.map((link) => (
             <motion.a
               key={link.name}
               href={link.href}
@@ -129,9 +129,11 @@ const Navbar = () => {
             </motion.a>
           ))}
 
+          {/* Resume */}
+
           <a
             href="/resume.pdf"
-            target="_blank"
+            download="Fahim-Shahriar-Nur-Resume.pdf"
             className="
             flex
             items-center
@@ -214,17 +216,21 @@ const Navbar = () => {
                 </a>
               ))}
 
+              {/* Mobile Resume */}
+
               <a
                 href="/resume.pdf"
+                download="Fahim-Shahriar-Nur-Resume.pdf"
+                onClick={() => setOpen(false)}
                 className="
-              text-center
-              px-5
-              py-3
-              rounded-xl
-              bg-cyan-500
-              text-white
-              font-semibold
-              "
+                text-center
+                px-5
+                py-3
+                rounded-xl
+                bg-cyan-500
+                text-white
+                font-semibold
+                "
               >
                 Download Resume
               </a>

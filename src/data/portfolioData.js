@@ -25,6 +25,7 @@ const portfolioData = {
   experience: [
     {
       company: "Brain Craft Ltd.",
+      companyUrl: "https://braincraftapps.com",
       role: "Software Development Intern",
       duration: "June 2026 – August 2026",
       responsibilities: [
