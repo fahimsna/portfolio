@@ -20,19 +20,6 @@ const projects = [
   },
 
   {
-    id: 2,
-    title: "NexPlay",
-    category: "Upcoming",
-    description:
-      "A MERN-based sports and entertainment platform featuring sports exploration, tournament and league discovery, match details, team information, and live event functionality.",
-    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/fahimsna/NexPlay.git",
-    live: null,
-    preview: "nexplay",
-    upcoming: true,
-  },
-
-  {
     id: 3,
     title: "Gontobbo",
     category: "Full Stack",
@@ -97,6 +84,19 @@ const projects = [
     live: "https://rock-paper-scissors-zeta-dun.vercel.app/",
     preview: "game",
     upcoming: false,
+  },
+
+  {
+    id: 2,
+    title: "NexPlay",
+    category: "Upcoming",
+    description:
+      "A MERN-based sports and entertainment platform featuring sports exploration, tournament and league discovery, match details, team information, and live event functionality.",
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/fahimsna/NexPlay.git",
+    live: null,
+    preview: "nexplay",
+    upcoming: true,
   },
 ];
 

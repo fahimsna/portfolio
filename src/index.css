@@ -1,14 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
 @import "tailwindcss";
+
+/* ================================
+   GLOBAL
+================================ */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
   font-family: "Inter", sans-serif;
+
   background: #020617;
   color: #f8fafc;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* ================================
+   HEADINGS
+================================ */
 
 h1,
 h2,
@@ -19,7 +37,52 @@ h6 {
   font-family: "Space Grotesk", sans-serif;
 }
 
+/* ================================
+   LINKS
+================================ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================================
+   BUTTONS / FORM ELEMENTS
+================================ */
+
+button,
+input,
+textarea,
+select {
+  font-family: "Inter", sans-serif;
+}
+
+/* ================================
+   TEXT SELECTION
+================================ */
+
 ::selection {
   background: #38bdf8;
   color: white;
+}
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
