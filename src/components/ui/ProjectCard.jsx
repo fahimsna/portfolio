@@ -83,7 +83,7 @@ const ProjectCard = ({ project }) => {
       className="group overflow-hidden rounded-2xl border border-slate-800 bg-[#0B1628] shadow-xl shadow-black/10 transition-all duration-300 hover:border-cyan-400/30"
     >
       {/* Live Website Preview */}
-      <div className="relative aspect-[16/9] overflow-hidden bg-white">
+      <div className="relative aspect-video overflow-hidden bg-white">
         <iframe
           src={project.live}
           title={`${project.title} live preview`}

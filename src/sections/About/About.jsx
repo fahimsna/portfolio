@@ -108,7 +108,7 @@ const About = () => {
                   <div
                     className="
                       flex
-                      h-[250px]
+                      h-62.5
                       w-full
                       flex-col
                       items-center
@@ -152,7 +152,7 @@ const About = () => {
                     <p
                       className="
                         mt-4
-                        max-w-[220px]
+                        max-w-55
                         text-[15px]
                         leading-6
                         text-slate-400
