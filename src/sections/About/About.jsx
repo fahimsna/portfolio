@@ -16,23 +16,23 @@ const About = () => {
   const cards = [
     {
       icon: FaGraduationCap,
-      title: "Education",
+      title: "Final-Year Student",
       text: "BSc in Computer Science at BRAC University",
     },
     {
       icon: FaBriefcase,
-      title: "Experience",
-      text: "Software Development Intern at Brain Craft Ltd.",
+      title: "Internship",
+      text: "Completed my Software Development Internship at Brain Craft Ltd.",
     },
     {
       icon: FaCode,
-      title: "Tech Stack",
+      title: "Full-Stack",
       text: "React • Node.js • Express • MongoDB",
     },
     {
       icon: FaLaptopCode,
-      title: "Focus",
-      text: "Building scalable and responsive web applications.",
+      title: "What I Build",
+      text: "Modern, responsive and API-driven web applications.",
     },
   ];
 
@@ -43,10 +43,20 @@ const About = () => {
 
         {/* About Description */}
         <motion.p
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          viewport={{
+            once: true,
+          }}
           className="
             mx-auto
             max-w-3xl
@@ -59,16 +69,16 @@ const About = () => {
           {portfolioData.about.description}
         </motion.p>
 
-        {/* Four Equal Cards */}
+        {/* About Cards */}
         <div
           className="
             mt-16
             grid
             grid-cols-1
+            items-stretch
             gap-6
             md:grid-cols-2
             lg:grid-cols-4
-            items-stretch
           "
         >
           {cards.map((card, index) => {
