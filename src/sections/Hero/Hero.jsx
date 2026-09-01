@@ -38,301 +38,131 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="
-        relative
-        min-h-screen
-        overflow-hidden
-        bg-[#030712]
-      "
+      className="relative min-h-screen overflow-hidden bg-[#030712]"
     >
-      {/* Right Background Portrait */}
-      <motion.div
-        initial={{ opacity: 0, x: 80 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        className="
-          absolute
-          right-0
-          top-0
-          h-full
-          w-[55%]
-          hidden
-          lg:block
-        "
-      >
-        <img
-          src={profile}
-          alt="Fahim Shahriar Nur"
-          className="
-            absolute
-            right-0
-            top-0
-            h-full
-            w-full
-            object-cover
-            object-top
-            opacity-55
-            brightness-110
-            contrast-110
-          "
-        />
+      {/* Background glow */}
+      <div className="pointer-events-none absolute -left-25 top-[20%] h-87.5 w-87.5 rounded-full bg-cyan-500/10 blur-[130px]" />
 
-        {/* Left Fade */}
-        <div
-          className="
-            absolute
-            inset-0
-            bg-gradient-to-r
-            from-[#030712]
-            via-[#030712]/70
-            to-transparent
-          "
-        />
-
-        {/* Bottom Fade */}
-        <div
-          className="
-            absolute
-            bottom-0
-            left-0
-            right-0
-            h-48
-            bg-gradient-to-t
-            from-[#030712]
-            to-transparent
-          "
-        />
-
-        {/* Soft Glow */}
-        <div
-          className="
-            absolute
-            right-32
-            top-32
-            w-[350px]
-            h-[350px]
-            rounded-full
-            bg-cyan-400/10
-            blur-[120px]
-          "
-        />
-      </motion.div>
-
-      {/* Background Glow */}
-      <div
-        className="
-          absolute
-          left-10
-          top-40
-          w-[250px]
-          h-[250px]
-          rounded-full
-          bg-cyan-500/20
-          blur-[120px]
-        "
-      />
+      <div className="pointer-events-none absolute -bottom-25 -right-25 h-87.5 w-87.5 rounded-full bg-blue-500/10 blur-[130px]" />
 
       <Container>
-        <div className="relative z-10 pt-32 pb-20">
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: -50,
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-            className="max-w-xl"
-          >
-            <p className="text-cyan-400 font-semibold text-lg">Hello, I'm</p>
-
-            <h1
-              className="
-                mt-4
-                text-5xl
-                md:text-6xl
-                font-bold
-                leading-tight
-                text-white
-              "
-            >
-              Fahim <span className="text-cyan-400">Shahriar Nur</span>
-            </h1>
-
-            <div
-              className="
-                mt-6
-                inline-flex
-                items-center
-                gap-3
-                px-4
-                py-2
-                rounded-full
-                bg-cyan-500/10
-                border
-                border-cyan-500/30
-              "
-            >
-              <span
-                className="
-                  w-2
-                  h-2
-                  rounded-full
-                  bg-green-400
-                  animate-pulse
-                "
-              />
-
-              <span className="text-sm text-cyan-300">
-                Open for Software Engineer Opportunities
-              </span>
-            </div>
-
-            {/* Animated Developer Title */}
+        <div className="relative z-10 flex min-h-screen items-center py-28">
+          <div className="grid w-full items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]">
+            {/* LEFT CONTENT */}
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.4,
-                duration: 0.6,
-              }}
-              className="
-                mt-8
-                min-h-[58px]
-                flex
-                items-center
-              "
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-2xl"
             >
-              <h2
-                className="
-                  text-3xl
-                  md:text-4xl
-                  font-bold
-                  text-slate-200
-                "
+              <p className="text-lg font-semibold text-cyan-400">Hello, I'm</p>
+
+              <h1 className="mt-4 text-5xl font-bold leading-tight text-white md:text-6xl">
+                Fahim <span className="text-cyan-400">Shahriar Nur</span>
+              </h1>
+
+              {/* Animated Developer Title */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.4,
+                  duration: 0.6,
+                }}
+                className="mt-8 flex min-h-14.5 items-center"
               >
-                {typedTitle}
-                <span
-                  className="
-                    inline-block
-                    ml-1
-                    text-cyan-400
-                    animate-pulse
-                  "
+                <h2 className="text-3xl font-bold text-slate-200 md:text-4xl">
+                  {typedTitle}
+                  <span className="ml-1 inline-block animate-pulse text-cyan-400">
+                    |
+                  </span>
+                </h2>
+              </motion.div>
+
+              {/* Description */}
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-400">
+                I build modern, scalable and responsive web applications using
+                modern full-stack technologies.
+              </p>
+
+              {/* Buttons */}
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="#projects"
+                  className="inline-flex items-center gap-3 rounded-xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
                 >
-                  |
-                </span>
-              </h2>
+                  View My Work
+                  <FaArrowRight />
+                </a>
+
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-3 rounded-xl border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+                >
+                  Contact Me
+                  <FaEnvelope />
+                </a>
+              </div>
+
+              {/* Social Links */}
+              <div className="mt-10 flex items-center gap-6">
+                <a
+                  href="https://github.com/fahimsna"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="text-xl text-slate-400 transition hover:text-cyan-400"
+                >
+                  <FaGithub />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="text-xl text-slate-400 transition hover:text-cyan-400"
+                >
+                  <FaLinkedin />
+                </a>
+
+                <a
+                  href="mailto:fahimshahriarnur@gmail.com"
+                  aria-label="Email"
+                  className="text-xl text-slate-400 transition hover:text-cyan-400"
+                >
+                  <FaEnvelope />
+                </a>
+              </div>
             </motion.div>
 
-            <p
-              className="
-                mt-6
-                text-slate-400
-                text-lg
-                leading-8
-                max-w-xl
-              "
+            {/* PROFILE IMAGE */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.15,
+              }}
+              className="flex justify-center lg:justify-end"
             >
-              I build modern, scalable and responsive web applications using
-              modern full-stack technologies.
-            </p>
+              <div className="relative">
+                {/* Image Glow */}
+                <div className="absolute inset-0 scale-110 rounded-full bg-cyan-400/10 blur-3xl" />
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4 mt-8">
-              <a
-                href="#projects"
-                className="
-                  inline-flex
-                  items-center
-                  gap-3
-                  px-6
-                  py-3
-                  rounded-xl
-                  bg-cyan-400
-                  text-slate-950
-                  font-semibold
-                  hover:bg-cyan-300
-                  transition
-                "
-              >
-                View My Work
-                <FaArrowRight />
-              </a>
-
-              <a
-                href="#contact"
-                className="
-                  inline-flex
-                  items-center
-                  gap-3
-                  px-6
-                  py-3
-                  rounded-xl
-                  border
-                  border-slate-700
-                  text-white
-                  font-semibold
-                  hover:border-cyan-400
-                  hover:text-cyan-400
-                  transition
-                "
-              >
-                Contact Me
-                <FaEnvelope />
-              </a>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-6 mt-10">
-              <a
-                href="https://github.com/fahimsna"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-                className="
-                  text-slate-400
-                  hover:text-cyan-400
-                  text-xl
-                  transition
-                "
-              >
-                <FaGithub />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="
-                  text-slate-400
-                  hover:text-cyan-400
-                  text-xl
-                  transition
-                "
-              >
-                <FaLinkedin />
-              </a>
-
-              <a
-                href="mailto:fahimshahriarnur@gmail.com"
-                aria-label="Email"
-                className="
-                  text-slate-400
-                  hover:text-cyan-400
-                  text-xl
-                  transition
-                "
-              >
-                <FaEnvelope />
-              </a>
-            </div>
-          </motion.div>
+                {/* Decorative Outer Ring */}
+                <div className="relative rounded-full border border-cyan-400/30 p-3">
+                  <div className="rounded-full border border-slate-700 bg-slate-900 p-2">
+                    <img
+                      src={profile}
+                      alt="Fahim Shahriar Nur"
+                      className="h-64 w-64 rounded-full object-cover object-top shadow-2xl md:h-80 md:w-80"
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </Container>
     </section>
